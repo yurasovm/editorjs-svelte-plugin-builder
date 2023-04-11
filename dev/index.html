@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>EditorJS Svelte Plugin</title>
+</head>
+<body>
+	<script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
+	<script type="module" src="./index.js"></script>
+
+	<div class="wrapper">
+		<div id="editorjs"></div>
+		<div class="view-area">
+			<div class="toolbar">
+				<button id="btnGetData" type="button" class="btn">Get data</button>
+				<button id="btnSetData" type="button" class="btn">Set data</button>
+			</div>
+			<textarea class="textarea" id="text"></textarea>
+		</div>
+	</div>
+
+	<style>
+		* { box-sizing: border-box;}
+
+		html, body {
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		.wrapper {
+			grid-template-columns: 2fr 1fr;
+			display: grid;
+			column-gap: 20px;
+			height: 100%;
+			padding: 20px;
+		}
+
+		.view-area {
+			display: flex;
+			flex-direction: column;
+			row-gap: 20px;
+		}
+
+		.textarea {
+			flex-grow: 1;
+		}
+
+		.btn {
+			padding: 13px;
+			border-radius: 3px;
+			border: 1px solid rgba(201,201,204,.48);
+			font-size: 14.9px;
+			background: #fff;
+			-webkit-box-shadow: 0 2px 2px 0 rgba(18,30,57,.04);
+			box-shadow: 0 2px 2px 0 rgba(18,30,57,.04);
+			color: #707684;
+			text-align: center;
+			cursor: pointer;
+		}
+	</style>
+</body>
+</html>
